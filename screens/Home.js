@@ -2,18 +2,18 @@ import React from "react";
 import { View, TouchableOpacity, Text, Image, StyleSheet } from "react-native";
 import { Ionicons, MaterialCommunityIcons, AntDesign } from "@expo/vector-icons";
 
-
 export default function Home() {
     return (
      <View style={{ flex: 1, }}>
+         
        <View style={{ flex: 1, 
         backgroundColor :'#956de6', 
         paddingTop: 8, 
         paddingHorizontal: 10,
         }}
        >
+          
            <View style={{ flexDirection: 'row', justifyContent: "space-between", alignItems: 'center'}}>
-               <Image source={('./assets/4ee012904c8ddc5f79d115a0b98b9262.png')} />
            <TouchableOpacity style={{ backgroundColor :"#cabae9", padding: 0.2,
             paddingHorizontal: 1,
             flexDirection: "row",
@@ -35,10 +35,46 @@ export default function Home() {
                     <Ionicons name="notifications" size={24} color="white" />
                 </View>
            </View>
+          
      </View>
-     <View style={{ flex: 3, backgroundColor: "white"}}>
-
+        
+     <View style={{ flex: 3, backgroundColor: "white", 
+     }}>
+          <Text style={{ color :"#4eb3fa", fontSize: 10, marginLeft: 130, fontWeight: 'bold', marginTop: 5}}>Welcome to the Sneaker Shopping App</Text>
+          <Text style={{color: 'orange', marginLeft: 170, fontSize: 10 }}> Nike section </Text>
+         <View 
+            style={{
+                height: 10,
+                width: 100,
+                marginRight: 15,
+                shadowColor: "#4e4f72",
+                shadowOpacity: 0.2,
+                shadowRadius: 30,
+                shadowOffset: {
+                    width: 10,
+                    height: 20,
+                },
+                borderRadius: 40,
+                elevation: 30,
+                marginVertical: -25,
+                alignItems: 'center',
+                justifyContent: 'center',
+            }}
+         >
+         <Image 
+           style={{
+            zIndex: 10,
+            marginTop: -45,
+            marginLeft: 20,
+            width: 105,
+            height: 100,
+            borderRadius: 200,
+                marginBottom: 0
+        }}
+         source={{uri: "https://logodix.com/logo/999359.jpg"}} />
+         </View>
      </View>
+       
     </View>
   );
 
