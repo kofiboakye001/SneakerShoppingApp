@@ -2,19 +2,26 @@ import React from "react";
 import { View, TouchableOpacity, Text, Image, StyleSheet } from "react-native";
 import { Ionicons, MaterialCommunityIcons, AntDesign } from "@expo/vector-icons";
 
-export default function Home() {
+
+
+export default function Home({navigation}) {
     return (
-     <View style={{ flex: 1, }}>
+
+        <View style={{ flex: 1, }}>
          
-       <View style={{ flex: 1, 
-        backgroundColor :'#956de6', 
-        paddingTop: 8, 
-        paddingHorizontal: 10,
-        }}
-       >
+            <View style={{ flex: 1, 
+            backgroundColor :'#956de6', 
+            paddingTop: 8, 
+            paddingHorizontal: 10,
+            }}
+            >
           
            <View style={{ flexDirection: 'row', justifyContent: "space-between", alignItems: 'center'}}>
-           <TouchableOpacity style={{ backgroundColor :"#cabae9", padding: 0.2,
+           <TouchableOpacity 
+           onPress={() => {
+               navigation.navigate("Cart")
+            }}
+           style={{ backgroundColor :"#cabae9", padding: 0.2,
             paddingHorizontal: 1,
             flexDirection: "row",
             alignItems: "center",
@@ -36,13 +43,13 @@ export default function Home() {
                 </View>
            </View>
           
-     </View>
+        </View>
         
-     <View style={{ flex: 3, backgroundColor: "white", 
-     }}>
+        <View style={{ flex: 3, backgroundColor: "white", 
+            }}>
           <Text style={{ color :"#4eb3fa", fontSize: 10, marginLeft: 130, fontWeight: 'bold', marginTop: 5}}>Welcome to the Sneaker Shopping App</Text>
           <Text style={{color: 'orange', marginLeft: 170, fontSize: 10 }}> Nike section </Text>
-         <View 
+        <View 
             style={{
                 height: 10,
                 width: 100,
@@ -73,9 +80,11 @@ export default function Home() {
         }}
          source={{uri: "https://logodix.com/logo/999359.jpg"}} />
          </View>
-     </View>
+         
+        </View>
        
-    </View>
+        </View>
+     
   );
 
 }

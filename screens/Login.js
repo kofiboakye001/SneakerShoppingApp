@@ -4,7 +4,8 @@ import {AntDesign} from '@expo/vector-icons'
 
 export default function Login({navigation}) {
     return (
-    <View style={{flex: 1, backgroundColor: 'black', justifyContent: "center", alignItems: "center"}}>
+        
+    <View style={{flex: 1, backgroundColor :'white', justifyContent: "center", alignItems: "center"}}>
         <Image 
         style={{
             width: 300,
@@ -18,7 +19,7 @@ export default function Login({navigation}) {
           onPress={() => {
             navigation.navigate("Home")
           }}
-            style={{ backgroundColor: "white", 
+            style={{ backgroundColor: "black", 
             padding: 10,
             paddingHorizontal: 70,
             flexDirection: "row",
@@ -26,8 +27,8 @@ export default function Login({navigation}) {
             borderRadius: 10,
             marginTop: 25}}
         >
-            <AntDesign name="google" size={24} color="rgb(256, 100, 10)" />
-                <Text style={{fontSize: 15, color: 'black', marginLeft: 15}}>Login with Gmail</Text>
+            <AntDesign name="google" size={24} color="#fcfbf4" />
+                <Text style={{fontSize: 15, color: 'white', marginLeft: 15}}>Login with Gmail</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => {
@@ -47,7 +48,7 @@ export default function Login({navigation}) {
         </TouchableOpacity>
         
         <TouchableOpacity>
-        <Text style={{fontSize: 15, marginTop: 10, fontWeight: 'bold', color :'#f6f4f4'}}>
+        <Text style={{fontSize: 15, marginTop: 10, fontWeight: 'bold', color :'black'}}>
             Not a member? <Text style={{color :"#4eb3fa", fontWeigth: 'bold' }}>Signup</Text>
             </Text>
         </TouchableOpacity>
