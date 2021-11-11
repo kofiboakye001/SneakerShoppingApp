@@ -1,18 +1,17 @@
 import React from 'react';
-import { Animated } from 'react-native';
+import { Animated, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-const HEADER_HEIGHT = 200;
+const HEADER_HEIGHT = 157;
 
 const AnimatedHeader = ({ animatedValue }) => {
   const insets = useSafeAreaInsets();
-
+  
   const headerHeight = animatedValue.interpolate({
     inputRange: [0, HEADER_HEIGHT + insets.top],
     outputRange: [HEADER_HEIGHT + insets.top, insets.top + 44],
     extrapolate: 'clamp'
   });
-
   return (
     <Animated.View
       style={{
@@ -22,7 +21,8 @@ const AnimatedHeader = ({ animatedValue }) => {
         right: 0,
         zIndex: 10,
         height: headerHeight,
-        backgroundColor: 'lightblue'
+        backgroundColor: '#956de6'
+
       }}
     />
   );

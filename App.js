@@ -6,10 +6,11 @@ import {createStackNavigator} from "@react-navigation/stack"
 import Login from "./screens/Login"
 import Home from "./screens/Home"
 import Cart from "./screens/Cart"
+import Input from "./screens/Input"
+import Signup from "./screens/Signup"
 
 export default function App() {
   const MainNavigator = createStackNavigator();
-
   return (
     
     <View style={{flex: 1}}>
@@ -18,6 +19,8 @@ export default function App() {
          <MainNavigator.Screen name = "Home" component={Home} />
          <MainNavigator.Screen name = "Login" component={Login} />
          <MainNavigator.Screen name = "Cart" component={Cart} />
+         <MainNavigator.Screen name = "Input" component={Input} />
+         <MainNavigator.Screen name = "Signup" component={Signup} />
         </MainNavigator.Navigator>
       </NavigationContainer>
     </View>
