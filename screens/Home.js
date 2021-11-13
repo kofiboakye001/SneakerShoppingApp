@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { View, TouchableOpacity, Text, Image, StyleSheet, Animated, Dimensions, SafeAreaView, TextInput} from "react-native";
+import { View, TouchableOpacity, Text, Image, StyleSheet, Animated, Dimensions, SafeAreaView, TextInput, ScrollView} from "react-native";
 import { ImageHeaderScrollView, TriggeringView } from 'react-native-image-header-scroll-view';
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -53,12 +53,12 @@ export default function Home({navigation}) {
       </SafeAreaView>
                     </View>
                 </TriggeringView>
-                
             </ImageHeaderScrollView>
-            <View style={{backgroundColor: 'white'}}>
-            <View style={{ flexDirection: 'row', justifyContent: "space-between", alignItems: 'center', marginTop: 10}}>
+           <ScrollView>
+            <View style={{flex: 1, backgroundColor: 'white'}}>
+            <View style={{ flexDirection: 'row', justifyContent: "space-between", alignItems: 'center', marginTop: -110}}>
                 <TouchableOpacity 
-            style={{ backgroundColor: "black", 
+            style={{ backgroundColor: "#fbebb4", 
             padding: 5,
             marginLeft: 20,
             height: 180,
@@ -75,7 +75,7 @@ export default function Home({navigation}) {
             height: 110,
             marginLeft: -125,
             }} 
-            source={require('../assets/images/Af1.png')} />
+            source={require('../assets/images/barcelona.png')} />
            </TouchableOpacity>
            
            <TouchableOpacity 
@@ -143,9 +143,10 @@ export default function Home({navigation}) {
             }} 
             source={require('../assets/images/tokyo.png')} />
            </TouchableOpacity>
-           <View style={{ flexDirection: 'row', justifyContent: "space-between", alignItems: 'center', marginTop: 10}}>
+            </View>
+            <View style={{ flexDirection: 'row', justifyContent: "space-between", alignItems: 'center', marginTop: 10}}>
                 <TouchableOpacity 
-            style={{ backgroundColor: "#f6d9b8", 
+            style={{ backgroundColor: "red", 
             padding: 5,
             height: 180,
             paddingHorizontal: 25,
@@ -163,10 +164,10 @@ export default function Home({navigation}) {
           height: 110,
           marginBottom: 65,
           marginLeft: -140,
-        }} source={require('../assets/images/georgetown.png')} />
+        }} source={require('../assets/images/Af1.png')} />
            </TouchableOpacity>
            <TouchableOpacity 
-            style={{ backgroundColor: "#fbb0a3", 
+            style={{ backgroundColor: "#c7e8e9", 
             padding: 5,
             marginLeft: 0,
             marginRight: 15,
@@ -177,18 +178,18 @@ export default function Home({navigation}) {
             borderRadius: 23,
             }}>
               <MaterialIcons style={{marginBottom:130}} name="favorite-border" size={24} color="white" />
-             <Text style={{color: 'white', marginTop: 40, }}>Air Force 1 Low</Text>
+             <Text style={{color: 'white', marginTop: 40, }}>Air Max 270</Text>
             <Image style={{
             marginBottom: 80,  
             width: 150,
             height: 90,
-            marginLeft: -125,
+            marginLeft: -105,
             }} 
-            source={require('../assets/images/wheat and purple.png')} />
+            source={require('../assets/images/airmax270.png')} />
            </TouchableOpacity>
            </View>
             </View>
-            </View>
+           </ScrollView>
         </View>
 
 
@@ -200,6 +201,7 @@ export default function Home({navigation}) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: 'white'
     },
     input: {
         height: 40,
