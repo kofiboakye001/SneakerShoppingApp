@@ -9,7 +9,6 @@ import Cart from "./screens/Cart"
 import Input from "./screens/Input"
 import Signup from "./screens/Signup"
 
-
 export default function App() {
   const MainNavigator = createStackNavigator();
   return (
