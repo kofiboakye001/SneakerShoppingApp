@@ -48,7 +48,7 @@ export default function MCheck ({navigation}) {
             flexDirection: "row",
             borderRadius: 13,
             }}> 
-            <Text>Proceed</Text>
+            <Text> Proceed to Checkout</Text>
             </TouchableOpacity>
       </SafeAreaView>
 
