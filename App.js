@@ -14,6 +14,7 @@ import air from "./screens/air"
 import tokyo from "./screens/tokyo"
 import george from "./screens/george"
 import sp from "./screens/sp"
+import MCheck from "./screens/MCheck"
 
 export default function App() {
   
@@ -34,6 +35,7 @@ export default function App() {
          <MainNavigator.Screen name = "tokyo" component={tokyo} />
          <MainNavigator.Screen name = "george" component={george} />
          <MainNavigator.Screen name = "sp" component={sp} />
+         <MainNavigator.Screen name = "MCheck" component={MCheck} />
 
         </MainNavigator.Navigator>
         

@@ -94,7 +94,9 @@ export default function Cart({navigation}) {
             <Image style={{alignContent: 'center', marginLeft:50, width: 190,height: 50}}source={require('../assets/images/paypal.png')} />
             </TouchableOpacity>
 
-            <TouchableOpacity style={{ backgroundColor: "#f4f5f7", paddingHorizontal: 50, padding: 4,marginRight: 10,marginLeft: 10,marginBottom: 20,
+            <TouchableOpacity onPress={() => {
+            navigation.navigate("MCheck")
+          }} style={{ backgroundColor: "#f4f5f7", paddingHorizontal: 50, padding: 4,marginRight: 10,marginLeft: 10,marginBottom: 20,
             flexDirection: "row",
             borderRadius: 13,
             }}> 
