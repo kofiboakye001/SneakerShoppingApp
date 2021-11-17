@@ -8,7 +8,7 @@ import Home from "./screens/Home"
 import Cart from "./screens/Cart"
 import Input from "./screens/Input"
 import Signup from "./screens/Signup"
-
+import Items from "./screens/Items"
 
 export default function App() {
   const MainNavigator = createStackNavigator();
@@ -22,6 +22,7 @@ export default function App() {
          <MainNavigator.Screen name = "Cart" component={Cart} />
          <MainNavigator.Screen name = "Input" component={Input} />
          <MainNavigator.Screen name = "Signup" component={Signup} />
+         <MainNavigator.Screen name = "Items" component={Items} />
         </MainNavigator.Navigator>
         
       </NavigationContainer>

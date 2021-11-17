@@ -42,7 +42,9 @@ export default function Home({navigation}) {
             <View style={{flex: 1, backgroundColor: 'white'}}>
               <ScrollView>
             <View style={{ flexDirection: 'row', justifyContent: "space-between", alignItems: 'center', marginTop: 15}}>
-                <TouchableOpacity 
+                <TouchableOpacity onPress={() => {
+            navigation.navigate("Items")
+          }} 
             style={{ backgroundColor: "#fbebb4", 
             padding: 5,
             marginLeft: 20,
