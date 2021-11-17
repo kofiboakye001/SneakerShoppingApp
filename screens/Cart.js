@@ -2,16 +2,20 @@ import React from "react";
 import { View,Text, Image, TouchableOpacity, StyleSheet, SafeAreaView, TextInput, ScrollView} from "react-native";
 
 
-export default function Cart() {
+export default function Cart({navigation}) {
 
   return (
     <View style={{flex: 1, backgroundColor :'white',}}>
       <ScrollView>
       <Text style={{marginLeft:20, marginTop:10, fontSize: 25, fontWeight:"bold", fontStyle: "italic"}}>My Cart</Text>
-      <TouchableOpacity style={{ backgroundColor: "#c5bdfd", paddingHorizontal: 50, padding: 8,marginRight: 10,marginLeft: 10, marginTop: 10,
+      <TouchableOpacity 
+      onPress={() => {
+        navigation.navigate("Items")
+     }}
+      style={{ backgroundColor: "#c5bdfd", paddingHorizontal: 50, padding: 8,marginRight: 10,marginLeft: 10, marginTop: 10,
             flexDirection: "row",
             borderRadius: 13,
-            }}> 
+            }}>
             <Image style={{width: 120,height: 80, marginLeft: -40, borderRadius: 10}}source={require('../assets/images/barca.jpeg')} />
            <Text style={{ fontStyle: "italic", marginLeft: 10, marginBottom: 5, fontWeight: "bold", fontSize: 17}}>Nike SB Dunk Low Barcelona Catalonia</Text>
            <Text style={{marginLeft: 20, marginBottom: 5, fontWeight: "bold", fontSize: 25, marginTop: 65, marginLeft:-220}}>$75.00</Text>

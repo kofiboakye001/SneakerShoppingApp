@@ -4,6 +4,7 @@ import { ImageHeaderScrollView, TriggeringView } from 'react-native-image-header
 import { Ionicons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import TabBar from './TabBar';
+import { FontAwesome } from '@expo/vector-icons';
 
 const MIN_HEIGHT = Platform.OS === 'ios' ? 90 : 55;
 const MAX_HEIGHT = 90
@@ -22,13 +23,13 @@ export default function Home({navigation}) {
            onPress={() => {
                navigation.navigate("Cart")
             }}
-           style={{ backgroundColor :"#cabae9", padding: 0.6,
-            paddingHorizontal: 1,
+           style={{ backgroundColor :"#cabae9", padding: 5,
+            paddingHorizontal: 5,
             flexDirection: "row",
             alignItems: "center",
             borderRadius: 7,
             }}>
-               <Ionicons name="menu" size={27} color="white" />
+               <FontAwesome name="shopping-bag" size={24} color="white" />
            </TouchableOpacity>
            <TextInput
         placeholder="Enter Search " placeholderTextColor="white" 
@@ -43,7 +44,7 @@ export default function Home({navigation}) {
               <ScrollView>
             <View style={{ flexDirection: 'row', justifyContent: "space-between", alignItems: 'center', marginTop: 15}}>
                 <TouchableOpacity onPress={() => {
-            navigation.navigate("Items")
+            navigation.navigate("items")
           }} 
             style={{ backgroundColor: "#fbebb4", 
             padding: 5,
@@ -69,8 +70,8 @@ export default function Home({navigation}) {
            </TouchableOpacity>
            
            <TouchableOpacity onPress={() => {
-            navigation.navigate("Items")
-          }} 
+               navigation.navigate("ftc")
+            }}
             style={{ backgroundColor: "#dedfe1", 
             padding: 5,
             height: 180,
@@ -94,7 +95,9 @@ export default function Home({navigation}) {
            </TouchableOpacity>
                 </View>
                 <View style={{flexDirection: 'row', justifyContent: "space-between", alignItems: 'center', marginTop: 10}}>
-                <TouchableOpacity 
+                <TouchableOpacity onPress={() => {
+            navigation.navigate("george")
+          }} 
             style={{ backgroundColor: "#f6d9b8", 
             padding: 5,
             height: 180,
@@ -116,7 +119,9 @@ export default function Home({navigation}) {
           marginLeft: -140,
         }} source={require('../assets/images/georgetown.png')} />
            </TouchableOpacity>
-           <TouchableOpacity 
+           <TouchableOpacity onPress={() => {
+            navigation.navigate("tokyo")
+          }} 
             style={{ backgroundColor: "#fbb0a3", 
             padding: 5,
             marginLeft: -10,
@@ -141,7 +146,9 @@ export default function Home({navigation}) {
            </TouchableOpacity>
             </View>
             <View style={{ flexDirection: 'row', justifyContent: "space-between", alignItems: 'center', marginTop: 10}}>
-                <TouchableOpacity 
+                <TouchableOpacity onPress={() => {
+            navigation.navigate("air")
+          }}  
             style={{ backgroundColor: "red", 
             padding: 5,
             height: 180,
@@ -162,7 +169,9 @@ export default function Home({navigation}) {
           marginLeft: -150,
         }} source={require('../assets/images/Af1.png')} />
            </TouchableOpacity>
-           <TouchableOpacity 
+           <TouchableOpacity onPress={() => {
+            navigation.navigate("sp")
+          }} 
             style={{ backgroundColor: "#c7e8e9", 
             padding: 5,
             marginLeft: -20,
