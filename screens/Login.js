@@ -19,7 +19,7 @@ export default function Login({navigation}) {
           onPress={() => {
             navigation.navigate("Input")
           }}
-            style={{ backgroundColor: "black", 
+            style={{ backgroundColor: "white", 
             padding: 10,
             paddingHorizontal: 70,
             flexDirection: "row",
@@ -27,8 +27,12 @@ export default function Login({navigation}) {
             borderRadius: 10,
             marginTop: 25}}
         >
-            <AntDesign name="google" size={24} color="#fcfbf4" />
-                <Text style={{fontSize: 15, color: 'white', marginLeft: 15}}>Login with Gmail</Text>
+            <Image style={{ 
+            width: 25,
+            height: 25,
+            }} 
+            source={require('../assets/images/Google.png')} />
+                <Text style={{fontSize: 15, color: 'black', marginLeft: 15}}>Login with Gmail</Text>
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => {
