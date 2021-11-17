@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, TextInput, View, TouchableOpacity, Text, ImageBackground } from "react-native";
+import { ScrollView, SafeAreaView, StyleSheet, TextInput, View, TouchableOpacity, Text, ImageBackground } from "react-native";
 import { Entypo } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 
@@ -7,13 +7,16 @@ export default function Signup({navigation}) {
 
 
   return (
+    
     <View style={styles.container}>
         <ImageBackground 
         imageStyle={{ opacity: 0.3,backgroundColor: 'white'}}
         source={{uri: "https://i.pinimg.com/originals/4c/52/97/4c5297b1a347d051533c39e3f630a274.jpg"}} resizeMode="cover" style={styles.image}>
-          <View style={{ justifyContent: "center", alignItems: "center"}}>
-      <Text style={{fontSize: 20, fontWeight: 'bold', color: 'green'}}>Create Account</Text>
+          <ScrollView>
+            <View style={{ justifyContent: "center", alignItems: "center"}}>
+      <Text style={{fontSize: 20, fontWeight: 'bold', color: 'green',marginTop: 30}}>Create Account</Text>
     <SafeAreaView>
+      
       <View style={styles.wrapper}>
         <View style={{flexDirection: "row", marginHorizontal: 0}}>
         <View style={{flex: 1}}>  
@@ -145,9 +148,11 @@ export default function Signup({navigation}) {
       >
           <Entypo name="twitter" size={24} color="#33bcfb" />
         </TouchableOpacity>
-           </View>
+           </View> 
+           </ScrollView>
            </ImageBackground>
     </View>
+    
   );
 };
 
