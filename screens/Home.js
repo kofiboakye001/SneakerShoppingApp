@@ -68,7 +68,9 @@ export default function Home({navigation}) {
             source={require('../assets/images/barcelona.png')} />
            </TouchableOpacity>
            
-           <TouchableOpacity 
+           <TouchableOpacity onPress={() => {
+            navigation.navigate("Items")
+          }} 
             style={{ backgroundColor: "#dedfe1", 
             padding: 5,
             height: 180,
